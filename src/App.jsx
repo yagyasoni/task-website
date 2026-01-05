@@ -181,7 +181,7 @@ const LandingPage = () => {
             <h2 className="text-6xl font-black text-slate-900 leading-tight mb-8">Ready to <br/><span className="text-blue-600">Sync with Nexus?</span></h2>
             <div className="space-y-4">
               <div className="flex gap-4 items-center font-bold text-slate-600"><div className="p-3 bg-blue-50 rounded-xl text-blue-600"><Mail size={20}/></div> connect@nexus.com</div>
-              <div className="flex gap-4 items-center font-bold text-slate-600"><div className="p-3 bg-blue-50 rounded-xl text-blue-600"><Phone size={20}/></div> +1 (800) NEXUS-01</div>
+              <div className="flex gap-4 items-center font-bold text-slate-600"><div className="p-3 bg-blue-50 rounded-xl text-blue-600"><Phone size={20}/></div> +91 (800) NEXUS-01</div>
             </div>
           </div>
           <div className={`p-10 rounded-[45px] ${glassClass}`}>
@@ -189,7 +189,7 @@ const LandingPage = () => {
               <input required className={inputClass} placeholder="Full Name" value={form.name} onChange={e=>setForm({...form, name:e.target.value})} />
               <div className="grid grid-cols-2 gap-5">
                 <input required type="email" className={inputClass} placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})} />
-                <input required className={inputClass} placeholder="Phone" value={form.phone} onChange={e=>setForm({...form, phone:e.target.value})} />
+                <input required type="tel" className={inputClass} placeholder="Phone" value={form.phone} onChange={e=>setForm({...form, phone:e.target.value.replace(/\D/g, '')})} pattern="[0-9]{10}" maxLength={10}/>
               </div>
               <textarea required rows="4" className={inputClass} placeholder="Project Details" value={form.desc} onChange={e=>setForm({...form, desc:e.target.value})} />
               <button type="submit" className="text-blue w-full py-5 rounded-2xl font-bold text-lg shadow-md hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500/30 transition-all active:scale-95 flex items-center justify-center gap-3">
@@ -201,7 +201,7 @@ const LandingPage = () => {
       </section>
       <section className="pb-24 px-6">
         <div className="max-w-6xl mx-auto h-[450px] rounded-[40px] overflow-hidden border-8 border-white shadow-2xl">
-          <iframe title="map" width="100%" height="100%" frameBorder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901361!2d-74.003693!3d40.71327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a21fb017c29%3A0x1420743f888849!2sWall%20St%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1633000000000"></iframe>
+          <iframe title="map" width="100%" height="100%" frameBorder="0" src="https://www.google.com/maps?q=20.5937,78.9629&z=4&output=embed"></iframe>
         </div>
       </section>
     </div>
